@@ -1,53 +1,35 @@
 ﻿export default [
-  {
-    path: '/user',
-    layout: false,
-    routes: [
-      {
-        name: 'login',
-        path: '/user/login',
-        component: './user/Login',
-      },
-      {
-        component: './404',
-      },
-    ],
-  },
-  {
-    path: '/welcome',
-    name: 'welcome',
-    icon: 'smile',
-    component: './Welcome',
-  },
-  {
-    path: '/admin',
-    name: 'admin',
-    icon: 'crown',
-    access: 'canAdmin',
-    component: './Admin',
-    routes: [
-      {
-        path: '/admin/sub-page',
-        name: 'sub-page',
+    {
+        path: '/user',
+        layout: false,
+        routes: [
+            {
+                name: 'login',
+                path: '/user/login',
+                component: './user/Login'
+            },
+            {
+                component: './404'
+            }
+        ]
+    },
+    {
+        name: '欢迎',
         icon: 'smile',
-        component: './Welcome',
-      },
-      {
-        component: './404',
-      },
-    ],
-  },
-  {
-    name: 'list.table-list',
-    icon: 'table',
-    path: '/list',
-    component: './TableList',
-  },
-  {
-    path: '/',
-    redirect: '/welcome',
-  },
-  {
-    component: './404',
-  },
+        path: '/welcome',
+        component: './Welcome'
+    },
+    {
+        name: '代办事项列表',
+        icon: 'table',
+        path: '/todolist',
+        component: './TodoList'
+    },
+    {
+        path: '/',
+        redirect: '/welcome'
+    },
+    {
+        component: './404'
+    }
 ];
