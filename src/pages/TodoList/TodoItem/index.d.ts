@@ -1,4 +1,4 @@
 export interface IProps {
     bear: string[];
-    handleItemDelete: (index) => any;
+    handleItemDelete: (index: number) => void;
 }

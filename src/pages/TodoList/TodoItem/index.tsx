@@ -16,7 +16,8 @@ const TodoItem: React.FC<IProps> = (props: IProps) => {
             <ol className={styles.demo_box}>
                 {bear.map((item: any, index: any) => {
                     return (
-                        <li key={index}>
+                        // 尽量不要使用index作为Key值，会出现Key值不稳定的情况，参考diff运算同层比对
+                        <li key={item}>
                             <Checkbox></Checkbox>
                             <Input value={item} />
                             <Button onClick={() => handleItemDelete(index)} type="primary" shape="circle" icon={<DeleteOutlined />} />
